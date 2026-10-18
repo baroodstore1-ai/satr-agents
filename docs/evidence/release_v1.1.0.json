@@ -1,0 +1,86 @@
+{
+ "name": "Satr v1.1.0",
+ "tag_name": "v1.1.0",
+ "description": "# Satr v1.1.0\n\n## English\n\n### Highlights\n- **Arabic subtitles for episode 12.** Episode 12 now ships with a complete Arabic subtitle file, so you can load it and play it without translating the episode yourself. The file includes right-to-left corrections, so words and punctuation in each line appear in the correct order on screen. (!1)\n\n### Fixes\n- **Space after Arabic punctuation.** When an Arabic comma (،), semicolon (؛) or question mark (؟) was followed directly by a letter, the words ran together on screen, as in \"مرحباً،كيف\". Satr now inserts the missing space, so the line reads \"مرحباً، كيف\". (!2)\n\n### Under the hood\n- Added a regression test for the missing space after Arabic punctuation, so the bug can't return unnoticed. (!2)\n- CI now runs the subtitle gate on subtitle-only changes, so a change that touches only subtitle files is checked automatically. This went straight to `main` as commit ad13a72, so it has no MR number.\n\n<div dir=\"rtl\" lang=\"ar\">\n\n## بالعربية\n\n### أبرز ما الجديد\n- **ترجمة عربية للحلقة 12.** أصبحت الحلقة 12 تأتي مع ملف ترجمة عربية كامل، فيمكنك تحميله وتشغيله مباشرةً دون الحاجة إلى ترجمة الحلقة بنفسك. ويتضمن الملف تصحيحات لاتجاه الكتابة من اليمين إلى اليسار، فتظهر الكلمات وعلامات الترقيم في كل سطر بالترتيب الصحيح على الشاشة. (!1)\n\n### الإصلاحات\n- **مسافة بعد علامات الترقيم العربية.** كانت الكلمات تلتصق على الشاشة إذا جاء حرف مباشرةً بعد الفاصلة (،) أو الفاصلة المنقوطة (؛) أو علامة الاستفهام (؟)، مثل «مرحباً،كيف». صار Satr يضيف المسافة الناقصة تلقائياً، فيظهر السطر هكذا: «مرحباً، كيف». (!2)\n\n### تحسينات داخلية\n- أُضيف اختبار انحدار لمشكلة المسافة الناقصة بعد علامات الترقيم العربية، حتى لا تعود المشكلة دون أن يلاحظها أحد. (!2)\n- صار CI يشغّل فحص الترجمة (subtitle gate) تلقائياً عند التعديلات التي تمسّ ملفات الترجمة وحدها، فيُفحص كل تغيير من هذا النوع دون تدخل يدوي. أُضيف هذا التعديل مباشرةً إلى الفرع الرئيسي `main` في الإيداع ad13a72، ولذلك لا يحمل رقم MR.\n\n</div>\n",
+ "created_at": "2026-10-18T17:25:47.026Z",
+ "released_at": "2026-10-18T17:25:47.026Z",
+ "upcoming_release": false,
+ "author": {
+  "id": 43481824,
+  "username": "satrtools",
+  "public_email": null,
+  "name": "barood store",
+  "state": "active",
+  "locked": false,
+  "avatar_url": "https://secure.gravatar.com/avatar/73514eb1235b18229fc094a9b23a6f0e2e0da578be4dbf70a118a047ee00a408?s=80&d=identicon",
+  "web_url": "https://gitlab.com/satrtools"
+ },
+ "commit": {
+  "id": "fd8795f3b5d99cacb2d80b798a7134cc5e0976ee",
+  "short_id": "fd8795f3",
+  "created_at": "2026-10-18T17:24:21.000+00:00",
+  "parent_ids": [
+   "d7c717af08be95070a07041f19dec293604cb8f6",
+   "7edd4dd340233d79a68276f38943eac5bb7e0f61"
+  ],
+  "title": "Merge branch 'release/v1.1.0' into 'main'",
+  "message": "Merge branch 'release/v1.1.0' into 'main'\n\nRelease v1.1.0\n\nSee merge request gitlab-ai-hackathon/transcend-october-2026/43481824/showcase!7",
+  "author_name": "barood store",
+  "author_email": "baroodstore1@gmail.com",
+  "authored_date": "2026-10-18T17:24:21.000+00:00",
+  "committer_name": "barood store",
+  "committer_email": "baroodstore1@gmail.com",
+  "committed_date": "2026-10-18T17:24:21.000+00:00",
+  "trailers": {},
+  "extended_trailers": {},
+  "web_url": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/commit/fd8795f3b5d99cacb2d80b798a7134cc5e0976ee"
+ },
+ "commit_path": "/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/commit/fd8795f3b5d99cacb2d80b798a7134cc5e0976ee",
+ "tag_path": "/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/tags/v1.1.0",
+ "assets": {
+  "count": 5,
+  "sources": [
+   {
+    "format": "zip",
+    "url": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/archive/v1.1.0/showcase-v1.1.0.zip"
+   },
+   {
+    "format": "tar.gz",
+    "url": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/archive/v1.1.0/showcase-v1.1.0.tar.gz"
+   },
+   {
+    "format": "tar.bz2",
+    "url": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/archive/v1.1.0/showcase-v1.1.0.tar.bz2"
+   },
+   {
+    "format": "tar",
+    "url": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/archive/v1.1.0/showcase-v1.1.0.tar"
+   }
+  ],
+  "links": [
+   {
+    "id": 13602840,
+    "name": "satr-v1.1.0.tgz (Package Registry)",
+    "url": "https://gitlab.com/api/v4/projects/87777882/packages/generic/satr/v1.1.0/satr-v1.1.0.tgz",
+    "direct_asset_url": "https://gitlab.com/api/v4/projects/87777882/packages/generic/satr/v1.1.0/satr-v1.1.0.tgz",
+    "link_type": "package"
+   }
+  ]
+ },
+ "evidences": [
+  {
+   "sha": "c909d507c7ec3482f4e3698f7d1ee42fb9379cc8026d",
+   "filepath": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/releases/v1.1.0/evidences/25255290.json",
+   "collected_at": "2026-10-18T17:25:47.347Z"
+  }
+ ],
+ "_links": {
+  "closed_issues_url": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/issues?release_tag=v1.1.0&scope=all&state=closed",
+  "closed_merge_requests_url": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/merge_requests?release_tag=v1.1.0&scope=all&state=closed",
+  "edit_url": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/releases/v1.1.0/edit",
+  "merged_merge_requests_url": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/merge_requests?release_tag=v1.1.0&scope=all&state=merged",
+  "opened_issues_url": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/issues?release_tag=v1.1.0&scope=all&state=opened",
+  "opened_merge_requests_url": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/merge_requests?release_tag=v1.1.0&scope=all&state=opened",
+  "self": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/releases/v1.1.0"
+ }
+}

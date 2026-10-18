@@ -16,3 +16,9 @@ Fixes made from these runs:
 MR !1 was rebased onto the fixed main; its pipeline is now green (subtitle gate passes on the Guardian's fix).
 Cleanup: closed !3–!6, deleted demo/failing-pipeline, demo/medic-faster-fixes and duo-medic/* branches. main stays green.
 Files: issue_*.json, mr_*.json, notes_all.json (every agent comment), sessions.json, release_scribe_events.json (session checkpoint), flow_update_*.json.
+
+## Round 2: maintainer actions (Oct 18, 2026, ~11:13–11:30 AM MDT)
+- Rebased and merged !2 (2117c88), then !1 (d7c717a). Both pipelines were green; main stayed green and Pages was redeployed.
+- Release Scribe: stopped the stale session 9653512 and re-mentioned on #3. Session 9653695 failed on approve (`--rejection-reason` cannot be sent with an approval: approve must carry no message). Session 9653726: the draft misattributed 86cc68b as a direct commit and listed a docs commit as !1, so the maintainer sent Modify feedback. The revised draft was accurate, the maintainer approved it, and the Scribe opened !7 (RELEASE_NOTES.md, CHANGELOG.md, package.json 1.1.0).
+- Merged !7 (fd8795f), tagged v1.1.0. The tag pipeline was green, and release v1.1.0 was published with the Scribe's EN/AR notes plus the package satr v1.1.0. main pipeline green, pages + verify-live green (version=fd8795f3).
+Files: merge_mr1/2/7.json, release_scribe2_*.json, release_scribe3_*.{json,md}, release_v1.1.0.json, release_scribe_events_final.json.
