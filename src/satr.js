@@ -45,8 +45,8 @@
       test: l => AR.test(l) && /[\u0600-\u06FF]\s*[,?;]|[,?;]\s*[\u0600-\u06FF]/.test(l),
       fix: l => l.replace(/([\u0600-\u06FF][\u0600-\u06FF\s]*?)\s*([,?;])/g, (m, a, p) => a.replace(/\s+$/, "") + { ",": "\u060C", "?": "\u061F", ";": "\u061B" }[p]) },
     { id: "space-punct", en: "Space before punctuation / double spaces", ar: "مسافات زائدة",
-      test: l => /\s[\u060C\u061F\u061B.!:]|\s{2,}/.test(l.replace(BIDI_CTRL, "")),
-      fix: l => l.replace(/\s+([\u060C\u061F\u061B.!:])/g, "$1").replace(/ {2,}/g, " ") },
+      test: l => /\s[\u060C\u061F\u061B.!:]|\s{2,}|[\u060C\u061F\u061B]\p{L}/u.test(l.replace(BIDI_CTRL, "")),
+      fix: l => l.replace(/\s+([\u060C\u061F\u061B.!:])/g, "$1").replace(/([\u060C\u061F\u061B])(?=\p{L})/gu, "$1 ").replace(/ {2,}/g, " ") },
     { id: "bidi-edge", en: "Punctuation or English at line edge will jump to the wrong side", ar: "علامات الترقيم تقفز للجهة الخطأ",
       test: l => AR.test(l) && !(l.startsWith(RLM) && l.endsWith(RLM)) &&
         (/^[\s\p{P}\p{S}\d A-Za-z-]/u.test(l.replace(BIDI_CTRL, "")) || /[\p{P}\p{S}\dA-Za-z]$/u.test(l.replace(BIDI_CTRL, ""))),
