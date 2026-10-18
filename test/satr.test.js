@@ -16,4 +16,7 @@ assert.strictEqual(S.fixLine("Hello, world?").line, "Hello, world?");
 // VTT
 const v = S.analyze("WEBVTT\n\n00:00.000 --> 00:02.000\nكيف حالك?\n");
 assert.ok(v.output.startsWith("WEBVTT") && v.output.includes("\u061F"));
+// regression #2: space before ، removed AND a space added after it when a letter follows
+assert.strictEqual(S.fixLine("هذا رائع ،أليس كذلك").line, "هذا رائع، أليس كذلك");
+assert.strictEqual(S.fixLine("هذا رائع، أليس كذلك").hits.length, 0, "already-correct comma untouched");
 console.log("all tests passed —", r.total, "fixes on sample");
