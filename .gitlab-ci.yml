@@ -31,6 +31,8 @@ variables:
   - qa/**/*
   - samples/**/*
   - templates/**/*
+  - "**/*.srt"                          # subtitle-only MRs must still run the subtitle gate
+  - "**/*.vtt"
   - index.html
   - package.json
   - .gitlab-ci.yml

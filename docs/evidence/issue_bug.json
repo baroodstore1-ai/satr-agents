@@ -1,0 +1,76 @@
+{
+ "id": 207060752,
+ "iid": 2,
+ "project_id": 87777882,
+ "title": "Arabic comma: space moved but not re-added after ، (words glued)",
+ "description": "**Bug (reported from a real subtitle file):** Satr removes the space *before* the Arabic comma but never adds one *after* it, so words get glued together.\n\nInput cue:\n```\n1\n00:00:01,000 --> 00:00:03,000\nهذا رائع ،أليس كذلك\n```\nAfter `satr fix`: `هذا رائع،أليس كذلك` — viewers read «رائع،أليس» as one word.\nExpected: `هذا رائع، أليس كذلك` (no space before ، / ؛ / ؟, one space after when a letter follows).\n\nAlso: the CLI prints `0 fixes applied` even though it changed the line.",
+ "state": "opened",
+ "created_at": "2026-10-18T16:56:14.285Z",
+ "updated_at": "2026-10-18T16:56:14.285Z",
+ "closed_at": null,
+ "closed_by": null,
+ "labels": [
+  "arabic-rtl",
+  "bug"
+ ],
+ "milestone": null,
+ "assignees": [],
+ "author": {
+  "id": 43481824,
+  "username": "satrtools",
+  "public_email": null,
+  "name": "barood store",
+  "state": "active",
+  "locked": false,
+  "avatar_url": "https://secure.gravatar.com/avatar/73514eb1235b18229fc094a9b23a6f0e2e0da578be4dbf70a118a047ee00a408?s=80&d=identicon",
+  "web_url": "https://gitlab.com/satrtools"
+ },
+ "type": "ISSUE",
+ "assignee": null,
+ "user_notes_count": 0,
+ "merge_requests_count": 0,
+ "upvotes": 0,
+ "downvotes": 0,
+ "start_date": null,
+ "due_date": null,
+ "confidential": false,
+ "discussion_locked": null,
+ "issue_type": "issue",
+ "web_url": "https://gitlab.com/gitlab-ai-hackathon/transcend-october-2026/43481824/showcase/-/work_items/2",
+ "time_stats": {
+  "time_estimate": 0,
+  "total_time_spent": 0,
+  "human_time_estimate": null,
+  "human_total_time_spent": null
+ },
+ "task_completion_status": {
+  "count": 0,
+  "completed_count": 0
+ },
+ "weight": null,
+ "blocking_issues_count": 0,
+ "has_tasks": true,
+ "task_status": "0 of 0 checklist items completed",
+ "_links": {
+  "self": "https://gitlab.com/api/v4/projects/87777882/issues/2",
+  "notes": "https://gitlab.com/api/v4/projects/87777882/issues/2/notes",
+  "award_emoji": "https://gitlab.com/api/v4/projects/87777882/issues/2/award_emoji",
+  "project": "https://gitlab.com/api/v4/projects/87777882",
+  "closed_as_duplicate_of": null
+ },
+ "references": {
+  "short": "#2",
+  "relative": "#2",
+  "full": "gitlab-ai-hackathon/transcend-october-2026/43481824/showcase#2"
+ },
+ "severity": "UNKNOWN",
+ "subscribed": true,
+ "moved_to_id": null,
+ "imported": false,
+ "imported_from": "none",
+ "service_desk_reply_to": null,
+ "epic_iid": null,
+ "epic": null,
+ "iteration": null,
+ "health_status": null
+}

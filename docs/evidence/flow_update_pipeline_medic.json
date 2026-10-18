@@ -1,0 +1,13 @@
+{
+ "data": {
+  "aiCatalogFlowUpdate": {
+   "errors": [],
+   "item": {
+    "id": "gid://gitlab/Ai::Catalog::Item/1018598",
+    "latestVersion": {
+     "humanVersionName": "v1.1.0"
+    }
+   }
+  }
+ }
+}

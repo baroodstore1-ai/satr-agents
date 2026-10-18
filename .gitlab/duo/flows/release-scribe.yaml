@@ -95,8 +95,13 @@ prompts:
         Find the version requested in the goal (for example v0.3.0). Collect every merge request merged into the
         default branch since the previous release tag (or all, if there is none) and the commits not in an MR.
         For each, record: title, IID, type (feature, fix, regression test, CI, docs), and the user-visible effect
-        on Arabic subtitles. When done, your final answer is that list plus the version. No further steps are
-        needed after that.
+        on Arabic subtitles.
+        Verify, do not infer: include an MR only if get_merge_request shows state "merged" and its target branch
+        is the default branch. Open, draft and closed MRs are never included, even if a refs/merge-requests/*/merge
+        commit exists. Include a commit only if list_commits on the default branch itself (ref_name = default
+        branch, since the previous tag's date) returns it; commits that exist only on other branches or MR refs are
+        excluded. If nothing qualifies, say "No user-visible changes since <tag>" and list what is still open.
+        When done, your final answer is that list plus the version. No further steps are needed after that.
       user: |
         Project ID: {{ project_id }}
         Goal: {{ goal }}
